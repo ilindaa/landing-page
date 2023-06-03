@@ -6,6 +6,13 @@
 
 body {
     margin: 0;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+}
+
+.content {
+    flex: 1;
 }
 
 /* Hero */
@@ -44,6 +51,54 @@ body {
     align-items: center;
 }
 
+/* Info */
+.info-title {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 50px 0;
+}
+
+.info-pic {
+    border: solid 4px #3882F6;
+    height: 150px;
+    width: 150px;
+    border-radius: 10px;
+}
+
+.info-boxes {
+    display: flex;
+    justify-content: center;
+    gap: 60px;
+    margin-bottom: 125px;
+}
+
+.info-item {
+    max-width: 150px;
+}
+
+.info-subtext {
+    text-align: center;
+    margin-top: 10px;
+}
+
+/* Quote */
+.quote-box {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+.quote {
+    max-width: 800px;
+}
+
+.quote-author {
+    display: flex;
+    justify-content: flex-end;
+}
+
 /* Footer */
 .footer {
     display: flex;
@@ -51,6 +106,8 @@ body {
     align-items: center;
     padding: 45px 0px 45px; 
 }
+
+/* Colors */
 
 /* Hero and Footer Text */
 .header-logo,
