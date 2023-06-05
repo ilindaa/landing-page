@@ -4,6 +4,25 @@
     font-family: "Roboto";
 }
 
+a {
+    text-decoration: none;
+}
+
+button {
+    background-color: #3882F6;
+    font-size: 18px;
+    font-weight: 500;
+    margin-top: 12px;
+    padding: 6px 34px;
+    border: none;
+    border-radius: 7px;
+}
+
+.button-border {
+    border: 2px solid white;
+}
+
+/* Footer and Flex Content  */
 body {
     margin: 0;
     min-height: 100vh;
@@ -11,11 +30,13 @@ body {
     flex-direction: column;
 }
 
+.hero {
+    min-height: 50vh;
+}
+
 .content {
     flex: 1;
 }
-
-/* Hero */
 
 /* Header */
 .header {
@@ -33,6 +54,11 @@ body {
     gap: 26px;
 }
 
+.header-logo {
+    font-size: 24px;
+    font-weight: bold;
+}
+
 /* Intro */
 .intro {
     display: flex;
@@ -41,9 +67,13 @@ body {
     gap: 40px;
 }
 
+.intro-title {
+    font-size: 48px;
+    font-weight: bolder;
+}
+
 .ph-img {
     background-color: #6d747d;
-    color: #E5E7EB;
     height: 230px;
     width: 480px;
     display: flex;
@@ -53,6 +83,8 @@ body {
 
 /* Info */
 .info-title {
+    font-size: 36px;
+    font-weight: bolder;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -84,13 +116,21 @@ body {
 
 /* Quote */
 .quote-box {
+    background-color: #E5E7EB;
+    padding: 130px 0px;
     display: flex;
     justify-content: center;
-    align-items: center;
-    padding: 130px 0px;
+}
+
+.quote-content {
+    display: flex;
+    flex-direction: column;
 }
 
 .quote {
+    font-size: 36px;
+    font-weight: 300;
+    font-style: italic;
     max-width: 800px;
 }
 
@@ -98,6 +138,7 @@ body {
     font-size: 24px;
     font-weight: bold;
     display: flex;
+    justify-content: flex-end;
 }
 
 /* Sign-Up Box */
@@ -115,7 +156,7 @@ body {
 
 .su-title {
     font-size: 24px;
-    font-weight: bold;
+    font-weight: 500;
 }
 
 /* Footer */
@@ -126,76 +167,33 @@ body {
     padding: 45px 0px 45px; 
 }
 
-/* ======= Colors ======== */
-
-/* Hero and Footer Text */
-.header-logo,
-.intro-title,
-.footer {
-    color: #F9FAF8;
-}
-
-/* Hero and Footer */
+/* Colors */
 .hero,
 .footer {
     background-color: #1F2937;
 }
 
-/* Header/Sign Up Links and Intro Subtext */
-.link, 
-.intro-desc {
+.header-logo,
+.intro-title,
+.su-title,
+.button,
+.footer {
+    color: #F9FAF8;
+}
+
+.link,
+.intro-desc,
+.ph-img,
+.su-subtext {
     color: #E5E7EB;
     font-size: 17px;
 }
 
-/* Header */
-.header-logo {
-    font-size: 24px;
-    font-weight: bold;
+.info-subtext {
+    color: #6d747d;
 }
 
-a {
-    text-decoration: none;
-}
-
-/* Intro */
-.intro-title {
-    font-size: 48px;
-    font-weight: bolder;
-}
-
-/* Button */
-button {
-    background-color: #3882F6;
-    color: #F9FAF8;
-    font-size: 18px;
-    font-weight: 500;
-    margin-top: 12px;
-    padding: 5px 34px;
-    border: none;
-    border-radius: 7px;
-}
-
-.b-border {
-    border: 2px solid white;
-}
-
-/* Info */
-.info-title {
-    font-size: 36px;
-    font-weight: bolder;
-    color: #1F2937;
-}
-
-/* Quote */
+.info-title,
 .quote-box {
-    background-color: #E5E7EB;
-    background-size: 100%;
-}
-
-.quote {
-    font-size: 36px;
-    font-weight: 300;
-    font-style: italic;
     color: #1F2937;
 }
