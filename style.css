@@ -1,19 +1,29 @@
-@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,400;0,500;0,900;1,300&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,400;0,500;0,900;1,300;1,900&display=swap');
 
 * {
     font-family: "Roboto";
+}
+
+:root {
+    --text-color: #1f2937;
 }
 
 a {
     text-decoration: none;
 }
 
+/* Pointer cursor */
+button,
+.info-pic:hover {
+    cursor: pointer;
+}
+
 button {
-    background-color: #3882F6;
+    color: white;
     font-size: 18px;
     font-weight: 500;
     margin-top: 12px;
-    padding: 6px 34px;
+    padding: 6px 36px;
     border: none;
     border-radius: 7px;
 }
@@ -72,13 +82,18 @@ body {
     font-weight: bolder;
 }
 
+.ph-img, 
+.kessoku-band-img {
+    height: 270px;
+    width: 480px;
+}
+
 .ph-img {
     background-color: #6d747d;
-    height: 230px;
-    width: 480px;
     display: flex;
     justify-content: center;
     align-items: center;
+    box-shadow: 5px 5px 10px 0px #131009;
 }
 
 /* Info */
@@ -91,35 +106,58 @@ body {
     padding: 50px 0;
 }
 
+.info-pic,
+.kb-img, 
+.info-item {
+    height: 188px;
+    width: 179px;
+}
+
+.kb-img {
+    border-radius: 5.5px;
+}
+
 .info-pic {
-    border: solid 4px #3882F6;
-    height: 150px;
-    width: 150px;
+    border: solid 4px #3b82f6;
     border-radius: 10px;
 }
 
 .info-boxes {
     display: flex;
     justify-content: center;
-    gap: 60px;
+    column-gap: 60px;
+    row-gap: 120px;
     margin-bottom: 125px;
+    flex-flow: row wrap;
 }
 
-.info-item {
-    max-width: 150px;
+.info-pic:hover {
+    transform: scale(1.1);
 }
 
 .info-subtext {
     text-align: center;
-    margin-top: 10px;
+    margin-top: 30px;
+    /* text-shadow source: https://stackoverflow.com/a/69999807 */
+    text-shadow: -2px -2px 0 var(--text-color),-2px -1px 0 var(--text-color),-2px 0px 0 var(--text-color),-2px 1px 0 var(--text-color),-2px 2px 0 var(--text-color),-1px -2px 0 var(--text-color),-1px -1px 0 var(--text-color),-1px 0px 0 var(--text-color),-1px 1px 0 var(--text-color),-1px 2px 0 var(--text-color),0px -2px 0 var(--text-color),0px -1px 0 var(--text-color),0px 0px 0 var(--text-color),0px 1px 0 var(--text-color),0px 2px 0 var(--text-color),1px -2px 0 var(--text-color),1px -1px 0 var(--text-color),1px 0px 0 var(--text-color),1px 1px 0 var(--text-color),1px 2px 0 var(--text-color),2px -2px 0 var(--text-color),2px -1px 0 var(--text-color),2px 0px 0 var(--text-color),2px 1px 0 var(--text-color),2px 2px 0 var(--text-color);
 }
 
 /* Quote */
 .quote-box {
-    background-color: #E5E7EB;
+    background: url(Images/bocchi-the-rock-concert.gif);
+    background-size: cover;
     padding: 130px 0px;
     display: flex;
     justify-content: center;
+
+    /* Set a specific height */
+    min-height: 500px;
+    
+    /* Parallax scrolling effect */
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
 }
 
 .quote-content {
@@ -173,10 +211,14 @@ body {
     background-color: #1F2937;
 }
 
+button,
+.su-box {
+    background-color: #3b82f6;
+}
+
 .header-logo,
-.intro-title,
 .su-title,
-.button,
+.quote-box,
 .footer {
     color: #F9FAF8;
 }
@@ -189,11 +231,25 @@ body {
     font-size: 17px;
 }
 
-.info-subtext {
-    color: #6d747d;
+.info-title {
+    color: #1F2937;
 }
 
-.info-title,
-.quote-box {
-    color: #1F2937;
+/* info-subtext colors */
+.hitori {
+    color: #ff00ff;
+}
+
+.nijika,
+.intro-title,
+a:hover {
+    color: #ffff00;
+}
+
+.ryo {
+    color: #00ffff;
+}
+
+.ikuyo {
+    color: #ff250e;
 }
